@@ -5,59 +5,191 @@ class TiketPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Film Bioskop", style: TextStyle(fontWeight: FontWeight.bold)),
-        automaticallyImplyLeading: false,
-      ),
-      body: ListView(
-        padding: const EdgeInsets.all(16.0),
-        children: [
-          const Text(
-            "Sedang Tayang",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text(
+            "Film Bioskop",
+            style: TextStyle(fontWeight: FontWeight.bold),
           ),
-          const SizedBox(height: 16),
-          // Simplified Movie Card
-          MovieCard(
-            movieTitle: "Bila Esok Ibu Tiada",
-            genre: "Drama, Keluarga",
-            ageRating: "R 13+",
-            rating: "9.2",
-            imageUrl: "Assets/Tiket2.png",
+          bottom: const TabBar(
+            tabs: [
+              Tab(text: "SEDANG TAYANG"),
+              Tab(text: "AKAN DATANG"),
+            ],
           ),
-          MovieCard(
-            movieTitle: "Santet Segoro Pitu",
-            genre: "Horror",
-            ageRating: "D 17+",
-            rating: "9.0",
-            imageUrl: "Assets/Tiket1.png",
-          ),
-          MovieCard(
-            movieTitle: "Gladiator II",
-            genre: "Action, Adventure",
-            ageRating: "D 17+",
-            rating: "9.5",
-            imageUrl: "Assets/Tiket.png",
-          ),
-          MovieCard(
-            movieTitle: "Red One",
-            genre: "Action, Adventure",
-            ageRating: "R 13+",
-            rating: "9.3",
-            imageUrl: "Assets/Tiket.png",
-          ),
-          const SizedBox(height: 32),
-          const Text(
-            "Akan Tayang",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 16),
-          const Text(
-            "Film-film akan tayang segera hadir di bioskop favorit Anda!",
-            style: TextStyle(fontSize: 14, color: Colors.grey),
-          ),
-        ],
+        ),
+        body: TabBarView(
+          children: [
+            // Tab "Sedang Tayang"
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2, // 2 movie cards per row
+                  crossAxisSpacing: 16.0,
+                  mainAxisSpacing: 16.0,
+                  childAspectRatio: 0.7, // Adjust the aspect ratio as needed
+                ),
+                itemCount: 8, // Total number of movies
+                itemBuilder: (context, index) {
+                  // Data for each movie
+                  final movies = [
+                    {
+                      "movieTitle": "Bila Esok Ibu Tiada",
+                      "genre": "Drama, Keluarga",
+                      "ageRating": "R 13+",
+                      "rating": "9.2",
+                      "imageUrl": "Assets/Tiket.png"
+                    },
+                    {
+                      "movieTitle": "Santet Segoro Pitu",
+                      "genre": "Horror",
+                      "ageRating": "D 17+",
+                      "rating": "9.0",
+                      "imageUrl": "Assets/Tiket1.png"
+                    },
+                    {
+                      "movieTitle": "Gladiator II",
+                      "genre": "Action, Adventure",
+                      "ageRating": "D 17+",
+                      "rating": "9.5",
+                      "imageUrl": "Assets/Tiket2.png"
+                    },
+                    {
+                      "movieTitle": "Red One",
+                      "genre": "Action, Adventure",
+                      "ageRating": "R 13+",
+                      "rating": "9.3",
+                      "imageUrl": "Assets/Tiket.png"
+                    },
+                    {
+                      "movieTitle": "Bila Esok Ibu Tiada",
+                      "genre": "Drama, Keluarga",
+                      "ageRating": "R 13+",
+                      "rating": "9.2",
+                      "imageUrl": "Assets/Tiket.png"
+                    },
+                    {
+                      "movieTitle": "Santet Segoro Pitu",
+                      "genre": "Horror",
+                      "ageRating": "D 17+",
+                      "rating": "9.0",
+                      "imageUrl": "Assets/Tiket1.png"
+                    },
+                    {
+                      "movieTitle": "Gladiator II",
+                      "genre": "Action, Adventure",
+                      "ageRating": "D 17+",
+                      "rating": "9.5",
+                      "imageUrl": "Assets/Tiket2.png"
+                    },
+                    {
+                      "movieTitle": "Red One",
+                      "genre": "Action, Adventure",
+                      "ageRating": "R 13+",
+                      "rating": "9.3",
+                      "imageUrl": "Assets/Tiket.png"
+                    },
+                  ];
+
+                  final movie = movies[index];
+                  return MovieCard(
+                    movieTitle: movie["movieTitle"]!,
+                    genre: movie["genre"]!,
+                    ageRating: movie["ageRating"]!,
+                    rating: movie["rating"]!,
+                    imageUrl: movie["imageUrl"]!,
+                  );
+                },
+              ),
+            ),
+            // Tab "Akan Datang"
+           Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2, // 2 movie cards per row
+                  crossAxisSpacing: 16.0,
+                  mainAxisSpacing: 16.0,
+                  childAspectRatio: 0.7, // Adjust the aspect ratio as needed
+                ),
+                itemCount: 8, // Total number of movies
+                itemBuilder: (context, index) {
+                  // Data for each movie
+                  final movies = [
+                    {
+                      "movieTitle": "Bila Esok Ibu Tiada",
+                      "genre": "Drama, Keluarga",
+                      "ageRating": "R 13+",
+                      "rating": "9.2",
+                      "imageUrl": "Assets/Tiket.png"
+                    },
+                    {
+                      "movieTitle": "Santet Segoro Pitu",
+                      "genre": "Horror",
+                      "ageRating": "D 17+",
+                      "rating": "9.0",
+                      "imageUrl": "Assets/Tiket1.png"
+                    },
+                    {
+                      "movieTitle": "Gladiator II",
+                      "genre": "Action, Adventure",
+                      "ageRating": "D 17+",
+                      "rating": "9.5",
+                      "imageUrl": "Assets/Tiket2.png"
+                    },
+                    {
+                      "movieTitle": "Red One",
+                      "genre": "Action, Adventure",
+                      "ageRating": "R 13+",
+                      "rating": "9.3",
+                      "imageUrl": "Assets/Tiket.png"
+                    },
+                    {
+                      "movieTitle": "Bila Esok Ibu Tiada",
+                      "genre": "Drama, Keluarga",
+                      "ageRating": "R 13+",
+                      "rating": "9.2",
+                      "imageUrl": "Assets/Tiket.png"
+                    },
+                    {
+                      "movieTitle": "Santet Segoro Pitu",
+                      "genre": "Horror",
+                      "ageRating": "D 17+",
+                      "rating": "9.0",
+                      "imageUrl": "Assets/Tiket1.png"
+                    },
+                    {
+                      "movieTitle": "Gladiator II",
+                      "genre": "Action, Adventure",
+                      "ageRating": "D 17+",
+                      "rating": "9.5",
+                      "imageUrl": "Assets/Tiket2.png"
+                    },
+                    {
+                      "movieTitle": "Red One",
+                      "genre": "Action, Adventure",
+                      "ageRating": "R 13+",
+                      "rating": "9.3",
+                      "imageUrl": "Assets/Tiket.png"
+                    },
+                  ];
+
+                  final movie = movies[index];
+                  return MovieCard(
+                    movieTitle: movie["movieTitle"]!,
+                    genre: movie["genre"]!,
+                    ageRating: movie["ageRating"]!,
+                    rating: movie["rating"]!,
+                    imageUrl: movie["imageUrl"]!,
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -91,7 +223,7 @@ class MovieCard extends StatelessWidget {
         children: [
           // Movie Poster
           Container(
-            height: 180,
+            height: 120,
             width: double.infinity,
             decoration: BoxDecoration(
               borderRadius: const BorderRadius.only(
@@ -112,7 +244,7 @@ class MovieCard extends StatelessWidget {
                 Text(
                   movieTitle,
                   style: const TextStyle(
-                    fontSize: 16,
+                    fontSize: 14,
                     fontWeight: FontWeight.bold,
                   ),
                   maxLines: 2,
@@ -122,7 +254,7 @@ class MovieCard extends StatelessWidget {
                 Text(
                   genre,
                   style: const TextStyle(
-                    fontSize: 14,
+                    fontSize: 12,
                     color: Colors.grey,
                   ),
                 ),
@@ -152,7 +284,7 @@ class MovieCard extends StatelessWidget {
                         Text(
                           rating,
                           style: const TextStyle(
-                            fontSize: 14,
+                            fontSize: 12,
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
                           ),

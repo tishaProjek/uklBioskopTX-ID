@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ukl/Widgets/Jakarta.dart';
 
 class TiketkuPage extends StatelessWidget {
   const TiketkuPage({super.key});
@@ -7,10 +8,7 @@ class TiketkuPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Tiketku",
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
+        title: Jakarta(),
         automaticallyImplyLeading: false, // Menghapus ikon default back
       ),
       body: Padding(
