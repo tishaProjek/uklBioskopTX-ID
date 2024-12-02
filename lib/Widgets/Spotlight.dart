@@ -48,19 +48,19 @@ class Spotlight extends StatelessWidget {
                   likes: 0,
                 ),
                 BoxOfficeWidget(
-                  imagePath: 'Assets/Spotlight.png',
+                  imagePath: 'Assets/Spotlight1.png',
                   title: 'TIX ID Box Office (11-17 November)',
                   views: 88,
                   likes: 12,
                 ),
                 BoxOfficeWidget(
-                  imagePath: 'Assets/Spotlight.png',
+                  imagePath: 'Assets/Spotlight2.png',
                   title: 'Film Terbaik Minggu Ini',
                   views: 102,
                   likes: 50,
                 ),
                 BoxOfficeWidget(
-                  imagePath: 'Assets/Spotlight.png',
+                  imagePath: 'Assets/Spotlight1.png',
                   title: 'Update Film Terkini',
                   views: 75,
                   likes: 30,

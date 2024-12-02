@@ -55,12 +55,12 @@ class Sedangtayang extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             children: [
               _buildMovieImageWithText(
-                'Assets/Movie.png',
+                'Assets/Movie1.png',
                 'Bila Esok Ibu Tiada',
                 'Film ini dapat rating ⭐ 9,2 dari penonton lho! Harus ditonton nih!',
               ),
               _buildMovieImageWithText(
-                'Assets/Movie.png',
+                'Assets/Movie2.png',
                 'Bila Esok Ibu Tiadat',
                 'Film ini dapat rating ⭐ 9,2 dari penonton lho! Harus ditonton nih!',
               ),

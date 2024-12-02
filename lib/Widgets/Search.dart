@@ -40,7 +40,7 @@ class SearchBars extends StatelessWidget {
           ),
           SizedBox(width: 16),
           Icon(
-            Icons.supervised_user_circle,
+            Icons.person_3_rounded,
             color: Colors.black,
             size: 28,
           ),

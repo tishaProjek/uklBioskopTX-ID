@@ -5,7 +5,8 @@ class Promosi extends StatefulWidget {
   _TestPromosiState createState() => _TestPromosiState();
 }
 
-class _TestPromosiState extends State<Promosi> with SingleTickerProviderStateMixin {
+class _TestPromosiState extends State<Promosi>
+    with SingleTickerProviderStateMixin {
   int _currentPage = 0;
   final PageController _pageController = PageController();
 
@@ -22,23 +23,23 @@ class _TestPromosiState extends State<Promosi> with SingleTickerProviderStateMix
         },
         children: [
           _buildAdPage("Assets/Promosi.png"),
+          _buildAdPage("Assets/Promosi1.png"),
+          _buildAdPage("Assets/Promosi2.png"),
           _buildAdPage("Assets/Promosi.png"),
+          _buildAdPage("Assets/Promosi1.png"),
+          _buildAdPage("Assets/Promosi2.png"),
           _buildAdPage("Assets/Promosi.png"),
+          _buildAdPage("Assets/Promosi1.png"),
+          _buildAdPage("Assets/Promosi2.png"),
           _buildAdPage("Assets/Promosi.png"),
+          _buildAdPage("Assets/Promosi1.png"),
+          _buildAdPage("Assets/Promosi2.png"),
           _buildAdPage("Assets/Promosi.png"),
+          _buildAdPage("Assets/Promosi1.png"),
+          _buildAdPage("Assets/Promosi2.png"),
           _buildAdPage("Assets/Promosi.png"),
-          _buildAdPage("Assets/Promosi.png"),
-          _buildAdPage("Assets/Promosi.png"),
-          _buildAdPage("Assets/Promosi.png"),
-          _buildAdPage("Assets/Promosi.png"),
-          _buildAdPage("Assets/Promosi.png"),
-          _buildAdPage("Assets/Promosi.png"),
-          _buildAdPage("Assets/Promosi.png"),
-          _buildAdPage("Assets/Promosi.png"),
-          _buildAdPage("Assets/Promosi.png"),
-          _buildAdPage("Assets/Promosi.png"),
-          _buildAdPage("Assets/Promosi.png"),
-          _buildAdPage("Assets/Promosi.png"),
+          _buildAdPage("Assets/Promosi1.png"),
+          _buildAdPage("Assets/Promosi2.png"),
         ],
       ),
     );
